@@ -116,9 +116,83 @@ const pages = {
   "products-sensor": {
     category: "产品中心",
     title: "油品传感器",
-    subtitle: "多参数传感器可监测污染度、含水率、粘度、介电常数、磨粒与温度等指标。",
+    subtitle: "面向在线油液监测的底层传感器，覆盖微量水分、含水率、粘度、密度、介电常数与温度等关键指标。",
     image: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1600&q=85",
-    points: ["支持边缘计算与Modbus接入", "适配润滑油、液压油、齿轮油", "小体积，便于旁路安装"],
+    points: ["适配润滑油、液压油、齿轮油等工业油品", "小体积，便于旁路与集成安装", "支持在线连续监测和系统联动预警"],
+    sensorProducts: [
+      {
+        model: "IFW-2A",
+        slug: "ifw-2a",
+        href: "product-ifw-2a.html",
+        title: "油液微量水分传感器",
+        image: "img/water.png",
+        badge: "微量水分",
+        intro: "用于检测油品水活性、温度并换算水分PPM值，适合对溶解水变化敏感的润滑系统在线监测。",
+        description: "传感器通过前端水分敏感元件获取水活性与温度，再结合油品水分模型输出PPM数据。内置多种油品饱和度曲线，可根据通讯协议切换，帮助现场及时识别油品受潮和水分异常趋势。",
+        features: ["0-10000ppm宽量程", "适合工业集成安装", "设计寿命最高10年", "防腐蚀探头，不易损坏"],
+        industries: "钢铁冶金、石油化工、能源电力、水泥建材、大型机械、煤炭采矿、地下挖掘等",
+        oils: "齿轮油、液压油、透平油、柴机油、绝缘油等",
+        specs: [
+          ["产品型号", "IFW-2A"],
+          ["检测指标", "温度、水活性（饱和度）、水分PPM值"],
+          ["水活性范围", "0.04-1aw"],
+          ["水分含量", "1-10000ppm"],
+          ["温度范围", "-35-+85℃"],
+          ["典型精度", "±0.04aw / 1ppm / ±0.5℃或±3%"],
+          ["数据模型", "内置上百种油品水分饱和度曲线，可根据通讯协议切换"],
+          ["适用油品", "齿轮油、液压油、透平油、柴机油、绝缘油等"],
+          ["应用行业", "钢铁冶金、石油化工、能源电力、水泥建材、大型机械、煤炭采矿、地下挖掘等"],
+        ],
+      },
+      {
+        model: "IFW-2B",
+        slug: "ifw-2b",
+        href: "product-ifw-2b.html",
+        title: "油液含水率传感器",
+        image: "img/water_aw.png",
+        badge: "含水率",
+        intro: "面向油品进水与含水率变化的在线测量，可持续监测游离水、乳化水等异常水分风险。",
+        description: "产品采用对水分变化敏感的检测结构，并通过电路设计与模型算法补偿温度、流量等现场因素。适用于对设备稳定性要求较高的连续运行场景，帮助提前发现油品进水风险。",
+        features: ["毫秒级响应", "游离水与乳化水监测", "软硬件并行补偿", "连续在线预警"],
+        industries: "钢铁冶金、石油化工、能源电力、水泥建材、大型机械、煤炭采矿、地下挖掘等",
+        oils: "润滑油、齿轮油、液压油、透平油、涡轮机油等",
+        specs: [
+          ["产品型号", "IFW-2B"],
+          ["检测指标", "油品含水率"],
+          ["监测水分", "游离水、乳化水"],
+          ["测量速率", "毫秒级测量响应"],
+          ["测量方式", "实时连续在线监测"],
+          ["补偿方式", "采用软硬件并行补偿，降低温度、流量等工况影响"],
+          ["输出用途", "油品进水、微量进水与水分异常趋势预警"],
+          ["适用油品", "润滑油、齿轮油、液压油、透平油、涡轮机油等"],
+          ["应用行业", "钢铁冶金、石油化工、能源电力、水泥建材、大型机械、煤炭采矿、地下挖掘等"],
+        ],
+      },
+      {
+        model: "IFV-3/4/5",
+        slug: "ifv-3-4-5",
+        href: "product-ifv-3-4-5.html",
+        title: "多参量油液传感器",
+        image: "img/vis.png",
+        badge: "粘度多参量",
+        intro: "集成粘度、密度、介电常数、含水率与温度检测，适合需要综合判断油品状态的在线监测系统。",
+        description: "传感器采用多功能集成检测结构，并配合模型数据与后端处理模块，实现大量程、多指标油液检测。一次安装即可覆盖多项关键指标，减少现场反复开孔和安装空间压力。",
+        features: ["动力粘度可达1500cP", "粘度/密度/介电/水分/温度一体检测", "减少现场开孔", "可按需选配更多指标"],
+        industries: "钢铁冶金、石油化工、能源电力、水泥建材、大型机械、煤炭采矿、地下挖掘等",
+        oils: "齿轮油、液压油、透平油、柴机油、绝缘油等",
+        specs: [
+          ["产品型号", "IFV-3/4/5"],
+          ["核心指标", "动力粘度、密度、介电常数、含水率、温度"],
+          ["粘度范围", "动力粘度最高1500cP"],
+          ["检测结构", "精密谐振机构与多功能集成检测结构"],
+          ["数据处理", "配合FOS模型数据与后端数据处理模块"],
+          ["安装价值", "降低在线油液监测现场反复开孔和安装空间需求"],
+          ["扩展能力", "可按需选配更多检测指标"],
+          ["适用油品", "齿轮油、液压油、透平油、柴机油、绝缘油等"],
+          ["应用行业", "钢铁冶金、石油化工、能源电力、水泥建材、大型机械、煤炭采矿、地下挖掘等"],
+        ],
+      },
+    ],
   },
   "products-online": {
     category: "产品中心",
@@ -234,6 +308,17 @@ const pages = {
   },
 };
 
+pages["products-sensor"].sensorProducts.forEach((product) => {
+  pages[`product-${product.slug}`] = {
+    category: "产品中心",
+    title: `${product.model}${product.title}`,
+    subtitle: product.intro,
+    image: pages["products-sensor"].image,
+    points: product.features,
+    sensorProduct: product,
+  };
+});
+
 function getPageKey() {
   const explicit = document.body.dataset.page;
   if (explicit) return explicit;
@@ -280,10 +365,92 @@ function renderFooter() {
         </div>
         <div><h3>解决方案</h3><a href="solutions-steel.html">钢铁冶金</a><a href="solutions-petrochemical.html">石油化工</a><a href="solutions-wind.html">风电能源</a><a href="solutions-liquid-cooling.html">算力液冷</a></div>
         <div><h3>产品中心</h3><a href="products-sensor.html">油品传感器</a><a href="products-online.html">在线监测系统</a><a href="products-portable.html">便携检测仪器</a><a href="products-cloud.html">油液云平台</a></div>
-        <div><h3>联系我们</h3><p>咨询电话：0755-8888 8000</p><p>邮箱：service@example.com</p><p>地址：深圳市南山区科技园</p></div>
+        <div><h3>联系我们</h3><p>咨询电话：15986421252</p><p>邮箱：liwenwei2023@163.com</p><p>地址：广州市天河区珠吉路安厦一街21号405</p></div>
       </div>
       <div class="footer-copy"><div class="container"><p>Copyright © 2026 润智科技 版权所有</p></div></div>
     </footer>
+  `;
+}
+
+function renderSensorProducts(page) {
+  const navItems = page.sensorProducts.map((product) => `
+    <a class="sensor-mini-card sensor-list-card" href="${product.href}">
+      <img src="${product.image}" alt="${product.title}">
+      <span>${product.model}</span>
+      <strong>${product.title}</strong>
+      <em>${product.intro}</em>
+    </a>
+  `).join("");
+
+  return `
+    <div class="product-category-intro">
+      <p class="eyebrow dark">Online Sensor</p>
+      <h2>${page.title}</h2>
+      <p>${page.subtitle}</p>
+      <div class="product-mini-grid">
+        ${navItems}
+      </div>
+    </div>
+
+    <a class="button primary page-cta" href="contact.html">获取传感器选型建议</a>
+  `;
+}
+
+function renderSensorDetailPage(product) {
+  const relatedProducts = pages["products-sensor"].sensorProducts.map((item) => `
+    <a class="${item.slug === product.slug ? "is-current" : ""}" href="${item.href}">${item.model}${item.title}</a>
+  `).join("");
+
+  return `
+    <div class="product-detail-tools">
+      <a href="products-sensor.html"><i data-lucide="arrow-left"></i> 返回传感器列表</a>
+      <div>${relatedProducts}</div>
+    </div>
+
+    <section class="product-detail-block" id="${product.slug}">
+      <div class="product-detail-head">
+        <div class="product-gallery">
+          <div class="product-gallery-main">
+            <img src="${product.image}" alt="${product.title}">
+          </div>
+          <div class="product-gallery-thumbs">
+            <img src="${product.image}" alt="${product.title}缩略图">
+            <img src="${product.image}" alt="${product.title}结构图">
+          </div>
+        </div>
+        <div class="product-detail-info">
+          <p class="eyebrow dark">${product.badge}</p>
+          <h3>${product.model}${product.title}</h3>
+          <p>${product.intro}</p>
+          <dl>
+            <div><dt>应用行业</dt><dd>${product.industries}</dd></div>
+            <div><dt>适用油品</dt><dd>${product.oils}</dd></div>
+          </dl>
+          <a class="button primary" href="contact.html">咨询产品报价</a>
+        </div>
+      </div>
+
+      <div class="product-doc-section">
+        <h4>产品介绍</h4>
+        <p>${product.description}</p>
+      </div>
+
+      <div class="product-doc-section">
+        <h4>技术特点</h4>
+        <ul class="product-feature-list">
+          ${product.features.map((feature) => `<li>${feature}</li>`).join("")}
+        </ul>
+      </div>
+
+      <div class="product-doc-section">
+        <h4>技术参数</h4>
+        <table class="product-param-table">
+          <tbody>
+            ${product.specs.map(([label, value]) => `<tr><th>${label}</th><td>${value}</td></tr>`).join("")}
+          </tbody>
+        </table>
+      </div>
+    </section>
   `;
 }
 
@@ -292,6 +459,21 @@ function renderPage(page) {
   const sideLinks = currentGroup
     ? currentGroup.children
     : [["应用案例", "cases.html"], ["联系我们", "contact.html"]];
+  const content = page.sensorProduct ? renderSensorDetailPage(page.sensorProduct) : page.sensorProducts ? renderSensorProducts(page) : `
+    <p class="eyebrow dark">Overview</p>
+    <h2>${page.title}</h2>
+    <p>${page.subtitle} 该页面是独立二级页面，可继续扩展为更详细的产品参数、行业痛点、实施流程、案例图片和表单转化内容。</p>
+    <div class="feature-list">
+      ${page.points.map((point) => `<div><i data-lucide="circle-check"></i><span>${point}</span></div>`).join("")}
+    </div>
+    <div class="process-grid">
+      <div><strong>01</strong><h3>现场调研</h3><p>确认设备类型、油品介质、采样位置与通讯环境。</p></div>
+      <div><strong>02</strong><h3>方案配置</h3><p>匹配传感器、监测终端、采样管路和云平台功能。</p></div>
+      <div><strong>03</strong><h3>安装调试</h3><p>完成设备接入、阈值设定、数据校准和告警验证。</p></div>
+      <div><strong>04</strong><h3>持续运维</h3><p>输出趋势报告、异常诊断建议和维护闭环记录。</p></div>
+    </div>
+    <a class="button primary page-cta" href="contact.html">获取方案咨询</a>
+  `;
 
   return `
     ${renderNav()}
@@ -310,19 +492,7 @@ function renderPage(page) {
             ${sideLinks.map(([label, href]) => `<a href="${href}" class="${href === `${getPageKey()}.html` ? "is-current" : ""}">${label}</a>`).join("")}
           </aside>
           <article class="content-panel">
-            <p class="eyebrow dark">Overview</p>
-            <h2>${page.title}</h2>
-            <p>${page.subtitle} 该页面是独立二级页面，可继续扩展为更详细的产品参数、行业痛点、实施流程、案例图片和表单转化内容。</p>
-            <div class="feature-list">
-              ${page.points.map((point) => `<div><i data-lucide="circle-check"></i><span>${point}</span></div>`).join("")}
-            </div>
-            <div class="process-grid">
-              <div><strong>01</strong><h3>现场调研</h3><p>确认设备类型、油品介质、采样位置与通讯环境。</p></div>
-              <div><strong>02</strong><h3>方案配置</h3><p>匹配传感器、监测终端、采样管路和云平台功能。</p></div>
-              <div><strong>03</strong><h3>安装调试</h3><p>完成设备接入、阈值设定、数据校准和告警验证。</p></div>
-              <div><strong>04</strong><h3>持续运维</h3><p>输出趋势报告、异常诊断建议和维护闭环记录。</p></div>
-            </div>
-            <a class="button primary page-cta" href="contact.html">获取方案咨询</a>
+            ${content}
           </article>
         </div>
       </section>
